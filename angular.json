@@ -1,10 +1,18 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ng-sho-sho": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "en": "src/locale/messages.en.xlf",
+          "ru": "src/locale/messages.ru.xlf",
+          "ua": "src/locale/messages.ua.xlf"
+        }
+      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -22,6 +30,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "localize": true,
             "aot": true,
             "assets": [
               "src/favicon.ico",
@@ -60,6 +69,15 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "ru": {
+              "localize": ["ru"]
+            },
+            "ua": {
+              "localize": ["ua"]
             }
           }
         },
@@ -71,6 +89,15 @@
           "configurations": {
             "production": {
               "browserTarget": "ng-sho-sho:build:production"
+            },
+            "en": {
+              "browserTarget": "ng-sho-sho:build:en"
+            },
+            "ua": {
+              "browserTarget": "ng-sho-sho:build:ua"
+            },
+            "ru": {
+              "browserTarget": "ng-sho-sho:build:ru"
             }
           }
         },
