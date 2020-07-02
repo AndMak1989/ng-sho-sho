@@ -71,13 +71,19 @@
               ]
             },
             "en": {
-              "localize": ["en"]
+              "localize": [
+                "en"
+              ]
             },
             "ru": {
-              "localize": ["ru"]
+              "localize": [
+                "ru"
+              ]
             },
             "ua": {
-              "localize": ["ua"]
+              "localize": [
+                "ua"
+              ]
             }
           }
         },
@@ -148,8 +154,13 @@
               "devServerTarget": "ng-sho-sho:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-sho-sho"
 }
